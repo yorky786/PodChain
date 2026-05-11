@@ -1,0 +1,15 @@
+name: "prerequisite_verification"
+version: "1.0.0"
+description: "Verifies mandatory Phase 5 prerequisites."
+input_schema:
+  phase4_baseline: "EXECUTIVE_SUMMARY_MAY_2026.md"
+  infra_authorization: "GCP_STAGING_READ_ONLY_BASELINE.md"
+output_artifact: "artifacts/prereq_status.json"
+validator:
+  rules:
+    - type: "file_exists"
+      target: "artifacts/prereq_status.json"
+    - type: "json_field_match"
+      target: "artifacts/prereq_status.json"
+      field: "foundation_locked"
+      value: true

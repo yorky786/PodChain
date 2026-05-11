@@ -1,0 +1,14 @@
+name: "cloud_run_deployment"
+version: "1.0.0"
+description: "Deploys Operation A to Staging."
+input_schema:
+  service_name: "neelam-intake-api-staging"
+  image: "gcr.io/neelam-hub-staging/intake-prototype:latest"
+output_artifact: "artifacts/deployment_receipt.json"
+validator:
+  rules:
+    - type: "file_exists"
+      target: "artifacts/deployment_receipt.json"
+    - type: "syntax_check"
+      target: "artifacts/deployment_receipt.json"
+      language: "json"

@@ -20,6 +20,12 @@ If you are using AI to generate code or data that *must* work in production, Pod
 ### 2. High-Integrity Environments
 In Finance, Healthcare, or Aerospace, "move fast and break things" is a liability. PodChain's **Interlocked Ignition** ensures that the system is self-correcting by stoppage.
 
+#### 🏭 Case Study: Neelam Carbon Phase 5 Staging
+Neelam Carbon utilizes PodChain to govern the transition from local research to GCP Staging. 
+- **The Challenge:** Preventing unauthorized cloud deployments or data ingestion during the "Authorization Gate" phase.
+- **The Solution:** A PodChain `governance_chain` that requires a signed receipt of "Phase 4 Verified Baseline" before the Cloud Run deployment pod can ignite.
+- **The Result:** Deterministic governance that ensures only authenticated, synthetic artifacts reach the staging buckets.
+
 ### 3. Transparent Handoffs
 If you have a team of developers (or AI agents) working on different stages of a pipeline, PodChain provides a clear, unforgeable record of exactly who passed what to whom, and when.
 
