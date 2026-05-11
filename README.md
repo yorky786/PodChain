@@ -5,6 +5,7 @@
 🏗️ **Featured:** 
 - [The PodChain Factory Model](docs/FACTORY_MODEL.md) — *Industrial-grade workflow architecture.*
 - [Anatomy of a Pod](docs/ANATOMY.md) — *Detailed technical blueprint of the execution node.*
+- [Strategic Implementation](docs/USE_CASES.md) — *When to use PodChain (and when not to).*
 
 > **Note:** PodChain does not replace AI. It controls AI by placing work inside fixed pods, artifact handoffs, validation gates, and receipts.
 
