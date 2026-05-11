@@ -1,0 +1,11 @@
+name: "pod_template"
+version: "1.0.0"
+description: "Job description"
+runtime: "python3"
+entrypoint: "run.py"
+input_schema: "input.template.yaml"
+output_artifact: "artifacts/output.txt"
+validator:
+  rules:
+    - type: "file_exists"
+      target: "artifacts/output.txt"

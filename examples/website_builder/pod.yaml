@@ -1,0 +1,10 @@
+name: "website_builder"
+version: "1.0.0"
+description: "Generates a simple index.html file"
+runtime: "python3"
+entrypoint: "run.py"
+output_artifact: "artifacts/index.html"
+validator:
+  rules:
+    - type: "file_exists"
+      target: "artifacts/index.html"

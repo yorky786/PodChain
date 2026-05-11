@@ -1,0 +1,5 @@
+type: "file_exists"
+target: "path/to/artifact"
+rules:
+  - pattern: "regex"
+    message: "Custom error message"

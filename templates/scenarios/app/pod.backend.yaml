@@ -1,0 +1,13 @@
+name: "backend_api_pod"
+version: "1.0.0"
+description: "Generates backend routing and logic."
+input_schema:
+  schema_file: "artifacts/schema.json"
+output_artifact: "artifacts/api.py"
+validator:
+  rules:
+    - type: "file_exists"
+      target: "artifacts/api.py"
+    - type: "syntax_check"
+      target: "artifacts/api.py"
+      language: "python"

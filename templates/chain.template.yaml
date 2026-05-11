@@ -1,0 +1,7 @@
+name: "workflow_name"
+pods:
+  - name: "step_1"
+    path: "pods/step_1"
+  - name: "step_2"
+    path: "pods/step_2"
+    depends_on: "step_1"

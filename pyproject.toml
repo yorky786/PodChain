@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "podchain"
+version = "0.1.0"
+description = "A controlled, interlocked workflow system for deterministic AI execution."
+readme = "README.md"
+authors = [
+    { name = "Amit Bhatia" }
+]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyyaml",
+]
+
+[project.scripts]
+podchain = "podchain.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["podchain*"]

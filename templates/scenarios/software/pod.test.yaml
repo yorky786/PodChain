@@ -1,0 +1,15 @@
+name: "software_test_pod"
+version: "1.0.0"
+description: "Runs automated tests for a code artifact."
+input_schema:
+  code_path: "artifacts/src/"
+  test_suite: "tests/"
+output_artifact: "artifacts/test_report.json"
+validator:
+  rules:
+    - type: "json_field_match"
+      target: "artifacts/test_report.json"
+      field: "status"
+      value: "PASSED"
+    - type: "file_exists"
+      target: "artifacts/test_report.json"

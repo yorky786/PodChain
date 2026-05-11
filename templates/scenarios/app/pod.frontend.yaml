@@ -1,0 +1,14 @@
+name: "frontend_ui_pod"
+version: "1.0.0"
+description: "Generates frontend components connecting to the API."
+input_schema:
+  api_spec: "artifacts/api_spec.yaml"
+  design_system: "assets/design_system.json"
+output_artifact: "artifacts/App.tsx"
+validator:
+  rules:
+    - type: "file_exists"
+      target: "artifacts/App.tsx"
+    - type: "syntax_check"
+      target: "artifacts/App.tsx"
+      language: "typescript"

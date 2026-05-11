@@ -1,0 +1,8 @@
+{
+  "pod_name": "string",
+  "timestamp": "iso8601",
+  "status": "PASS|FAIL|BLOCKED",
+  "artifact_hash": "sha256",
+  "validation_report": {},
+  "error": null
+}

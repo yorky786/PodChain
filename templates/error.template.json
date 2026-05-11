@@ -1,0 +1,6 @@
+{
+  "code": "ERROR_CODE",
+  "message": "Human readable message",
+  "traceback": null,
+  "context": {}
+}

@@ -1,0 +1,13 @@
+name: "landing_page_workflow"
+description: "A high-conversion landing page creation chain."
+pods:
+  - name: "copywriting"
+    description: "Writes the headlines and call-to-actions."
+    template: "pod.copy.yaml"
+  - name: "hero_visual"
+    description: "Generates or selects the main image/svg."
+    template: "pod.visual.yaml"
+  - name: "assembly"
+    description: "Combines copy and visuals into a single page."
+    depends_on: ["copywriting", "hero_visual"]
+    template: "pod.assemble.yaml"
